@@ -16,20 +16,24 @@ const Drawer: FC<DrawerProps> = ({ open = false, toggleDrawer }) => {
         <div className="flex flex-col mb-4">
           <b className="text-primary mb-4">Navigation</b>
 
-          <Link href={"/"}>
-            <a className={styles["pageLink"]} onClick={() => toggleDrawer()}>
-              Home
-            </a>
+          <Link
+            href={"/"}
+            className={styles["pageLink"]}
+            onClick={() => toggleDrawer()}
+          >
+            Home
           </Link>
 
-          <Link href={"/#work"}>
-            <a className={styles["pageLink"]}>My Work</a>
+          <Link href={"/#work"} className={styles["pageLink"]}>
+            My Work
           </Link>
 
-          <Link href={"/about-me"}>
-            <a className={styles["pageLink"]} onClick={() => toggleDrawer()}>
-              About Me
-            </a>
+          <Link
+            href={"/about-me"}
+            className={styles["pageLink"]}
+            onClick={() => toggleDrawer()}
+          >
+            About Me
           </Link>
         </div>
 

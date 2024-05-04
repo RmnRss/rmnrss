@@ -18,10 +18,14 @@ const Header: FC = () => {
     <>
       <header className={`w-full p-4 flex justify-center align-middle`}>
         <nav className="w-full flex align-middle justify-between max-w-7xl">
-          <Link passHref href={"/"}>
-            <a className="pr" target="_self" onClick={() => closeDrawer()}>
-              rmnrss.io
-            </a>
+          <Link
+            passHref
+            href={"/"}
+            className="pr"
+            target="_self"
+            onClick={() => closeDrawer()}
+          >
+            rmnrss.io
           </Link>
 
           <Icon

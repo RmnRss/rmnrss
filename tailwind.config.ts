@@ -1,8 +1,7 @@
-module.exports = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-  ],
+import type { Config } from "tailwindcss"
+
+export default {
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     screen: {
       "2xl": 1440,
@@ -39,4 +38,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+} satisfies Config

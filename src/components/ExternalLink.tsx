@@ -1,6 +1,7 @@
-import { FC } from "react"
+import { FC, ReactNode } from "react"
 
 interface ExternalLinkProps {
+  children: ReactNode
   href: string
   rel?: string
   target?: string

@@ -6,8 +6,7 @@ interface SEOProps {
   title: string
 }
 
-const siteTitle = "rmnrss.io"
-const twitter = "rmnrss"
+const siteTitle = "Romain Rousseau"
 
 const SEO: FC<SEOProps> = ({ description, title }) => {
   return (
@@ -18,10 +17,6 @@ const SEO: FC<SEOProps> = ({ description, title }) => {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:site_name" content={siteTitle} />
-      <meta property="twitter:card" content="summary" />
-      <meta property="twitter:creator" content={twitter} />
-      <meta property="twitter:title" content={title} />
-      <meta property="twitter:description" content={description} />
     </Head>
   )
 }

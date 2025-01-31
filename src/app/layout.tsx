@@ -1,9 +1,12 @@
 import type { Metadata } from "next"
-import { Urbanist } from "next/font/google"
+import { Manrope, Urbanist } from "next/font/google"
 import FullscreenLayout from "../layouts/FullscreenLayout"
 import "./global.css"
 
 const urbanist = Urbanist({ subsets: ["latin"] })
+const manrope = Manrope({
+  subsets: ["latin"],
+})
 
 export const metadata: Metadata = {
   title: "Romain Rousseau",
@@ -16,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={urbanist.className}>
+    <html lang="en" className={[urbanist.className, manrope.className].join()}>
       <body>
         <FullscreenLayout title="rmnrss.io">{children}</FullscreenLayout>
       </body>

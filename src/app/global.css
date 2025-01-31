@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --font-main: "Urbanist", sans-serif;
+    --font-alt: "Manrope", sans-serif;
+    --color-pm: 255 136 0; /* #ff8800 */
+    --color-dark: 23 25 15; /* #17190F */
+    --color-white: 228 228 228; /* #FFF */
+    --color-gray: 126 113 106; /* #7e716a */
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,15 +21,17 @@
 
 html {
   scroll-behavior: smooth;
+
+  font-size: 14px;
 }
 
 body {
-  font-family: "Urbanist", sans-serif;
+  font-family: var(--font-alt);
 
-  color: #fafafa;
+  color: rgb(var(--color-white));
   letter-spacing: 0.0015em;
 
-  background-color: #181818;
+  background-color: rgb(var(--color-dark));
   margin: 0;
 }
 
@@ -42,23 +55,23 @@ h4 {
 
 p,
 b {
-  font-size: 0.75rem;
-  line-height: 1.5;
+  text-wrap: pretty;
+  font-family: var(--font-alt);
+  font-size: 1rem;
+  line-height: 1.8rem;
 }
 
 p {
   font-weight: normal;
   text-transform: none;
-  font-family: "Urbanist", sans-serif;
 
-  color: #181818;
+  color: rgb(var(--color-white));
 }
 
 a,
 a:visited {
-  color: inherit;
-  font-weight: 700;
-  text-decoration: none;
+  text-decoration: underline;
+  font-weight: unset;
 }
 
 img {
@@ -109,6 +122,13 @@ img {
   max-height: 100%;
 
   padding: 128px 64px;
+
+  @media screen and (max-width: 960px) {
+    padding: 64px 32px;
+  }
+  @media screen and (max-width: 480px) {
+    padding: 32px 16px;
+  }
 }
 
 .main-grid {
@@ -127,19 +147,4 @@ img {
 
 .pos-fix {
   position: fixed;
-}
-
-@media screen and (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  h3,
-  h4 {
-    font-size: 1.25rem;
-  }
 }

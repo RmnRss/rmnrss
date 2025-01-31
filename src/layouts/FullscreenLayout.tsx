@@ -1,23 +1,14 @@
-import { FC } from "react"
-import SEO from "../components/seo"
+import { FC, ReactNode } from "react"
 
 interface FullPageLayoutProps {
-  description?: string
-  title: string
+  children: ReactNode
 }
 
-const FullscreenLayout: FC<FullPageLayoutProps> = ({
-  children,
-  description,
-  title,
-}) => {
+const FullscreenLayout: FC<FullPageLayoutProps> = ({ children }) => {
   return (
-    <>
-      <SEO title={title} description={description} />
-      <div className="fullscreen">
-        <div className="main-grid">{children}</div>
-      </div>
-    </>
+    <div className="fullscreen">
+      <div className="main-grid">{children}</div>
+    </div>
   )
 }
 

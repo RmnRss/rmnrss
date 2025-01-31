@@ -11,26 +11,21 @@ export default {
       sm: 512,
     },
     colors: {
-      transparent: "transparent",
-      current: "currentColor",
-      light: "#FAFAFA",
-      lightBlue: "#EAF0FF",
-
-      dark: "#181818",
-      darkLight: "#232323",
-
-      primary: "#0089FF",
-
-      accentBlue: "#2D9BF3",
-      accentGreen: "#22CAAC",
-      accentPurple: "#B620E0",
-      accentYellow: "#F7B500",
+      pm: "rgb(var(--color-pm))",
+      dark: "rgb(var(--color-dark))",
+      white: "rgb(var(--color-white))",
+      gray: "rgb(var(--color-gray))",
     },
     fontFamily: {
-      main: ["Heebo", "sans-serif"],
-      alt: ["Encode Sans", "serif"],
+      main: "var(--font-main)",
+      alt: "var(--font-alt)",
     },
     extend: {
+      fontSize: {
+        md: "1.15rem",
+        base: "1rem",
+        sm: "0.75rem",
+      },
       borderRadius: {
         rounded: "50%",
         main: "12px",

@@ -13,10 +13,17 @@ const ExternalLink: FC<ExternalLinkProps> = ({
   href,
   rel = "noreferrer noopener",
   target = "_blank",
+  className,
   ...props
 }) => {
   return (
-    <a target={target} rel={rel} href={href} {...props}>
+    <a
+      target={target}
+      rel={rel}
+      href={href}
+      className={`${className} text-pm`}
+      {...props}
+    >
       {children}
     </a>
   )

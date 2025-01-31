@@ -1,15 +1,17 @@
+import { Metadata } from "next"
 import Link from "next/link"
-import SEO from "../components/seo"
+
+export const metadata: Metadata = {
+  title: "404 | Romain Rousseau",
+  description: "My Portfolio Website",
+}
 
 const NotFoundPage = () => {
   return (
-    <>
-      <SEO title="Page not found." />
-      <body>
-        <h1>Woopsies</h1>
-        <Link href="/">Home Page</Link>
-      </body>
-    </>
+    <body>
+      <h1>Woopsies</h1>
+      <Link href="/">Home Page</Link>
+    </body>
   )
 }
 
